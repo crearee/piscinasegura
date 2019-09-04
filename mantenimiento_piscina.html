@@ -135,7 +135,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar1_[$index] = !mostrar1_[$index]">
@@ -146,13 +146,13 @@
                                                             <div class="row">
                                                                 <div class="col-6">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id}}" ng-model="tarea.estado" value="realizado">
+                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="realizado">
                                                                         <label class="custom-control-label" for="aseo_general-{{tarea.id}}">Realizado</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-6">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id + 1}}" ng-model="tarea.estado" value="pendiente">
+                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="pendiente">
                                                                         <label class="custom-control-label" for="aseo_general-{{tarea.id + 1}}">Pendiente</label>
                                                                     </div>
                                                                 </div>
@@ -176,7 +176,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar2_[$index] = !mostrar2_[$index]">
@@ -217,7 +217,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar3_[$index] = !mostrar3_[$index]">
@@ -270,7 +270,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar4_[$index] = !mostrar4_[$index]">
@@ -310,7 +310,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar5_[$index] = !mostrar5_[$index]">
@@ -320,7 +320,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <input type="text" class="form-control" ng-model="tarea.resultado">
+                                                                    <input type="text" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group margen_sup_5px" ng-show="mostrar5_[$index]">
@@ -350,7 +350,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar6_[$index] = !mostrar6_[$index]">
@@ -360,8 +360,8 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-6 margen_inf_15px">
-                                                                    <label>Cantidad</label>
-                                                                    <input type="number" class="form-control" ng-model="tarea.cantidad">
+                                                                    <label>estado</label>
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                                 <div class="col-s6">
                                                                     <label>Se evidencia</label>
@@ -411,7 +411,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar7_[$index] = !mostrar7_[$index]">
@@ -466,7 +466,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar8_[$index] = !mostrar8_[$index]">
@@ -521,7 +521,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar9_[$index] = !mostrar9_[$index]">
@@ -591,7 +591,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
@@ -601,10 +601,10 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-4">
-                                                                    <span class="padding_izq_15px">Cantidad: </span>
+                                                                    <span class="padding_izq_15px          ">Cantidad: </span>
                                                                 </div>
                                                                 <div class="col-7">
-                                                                    <input type="number" class="form-control" ng-model="tarea.cantidad">
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
@@ -623,7 +623,7 @@
                                                                     <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <p class="margen_inf_10px justificado">{{tarea.nom_tarea}}</p>
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
                                                                 <div class="col-2">
                                                                     <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
@@ -633,7 +633,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <input type="number" class="form-control" ng-model="tarea.cantidad">
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
@@ -648,11 +648,13 @@
 
                                         </div>
                                     </form>
-                                    <!--<code>
-                                        {{frm_chequeo.categorias[num_categoria.botiquin]}}
-                                    </code>-->
+                                    <code>
+                                        {{final}}
+                                    </code>
                                     <!--FIN DE FORMULARIO-->
-
+                                    <div class="row d-flex justify-content-center margen_sup_25px">
+                                        <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="enviar_informacion();">enviar</button>    
+                                    </div>
                                 </div>
                             </div>
 
