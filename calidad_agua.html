@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" ng-app="piscina_segura">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+
+        <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+        <link rel="icon" href="img/f7-icon.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="vendor/bootstrap-4.1.3/css/bootstrap.min.css">
+
+        <!-- Material design icons CSS -->
+        <link rel="stylesheet" href="vendor/materializeicon/material-icons.css">
+
+        <!-- swiper carousel CSS -->
+        <link rel="stylesheet" href="vendor/swiper/css/swiper.min.css">
+
+        <!-- app CSS -->
+        <link id="theme" rel="stylesheet" href="css/style.css" type="text/css">
+
+
+        <title>Calidad del agua</title>
+    </head>
+
+    <body class="color-theme-blue push-content-right theme-light" ng-controller="ctrl_body">
+        <div class="loader justify-content-center ">
+            <div class="maxui-roller align-self-center">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <!-- sidebar left start -->
+            <div class="sidebar sidebar-left">
+                <div class="profile-link">
+                    <a href="#" class="media">
+                        <div class="w-auto h-100">
+                            <figure class="avatar avatar-40">
+                                <img src="img/user1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-body">
+                            <h5 class=" mb-0">Usuario <span class="status-online bg-success"></span></h5>
+                            <p>Mentenimiento</p>
+                        </div>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="main.html" class="sidebar-close">
+                                <div class="item-title">
+                                    <i class="material-icons">home</i> Menú principal
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile-link text-center">
+                    <a href="login.html" class="btn btn-link text-white btn-block">SALIR</a>
+                </div>
+            </div>
+            <!-- sidebar left ends -->
+
+            <!-- sidebar right start -->
+            <div class="sidebar sidebar-right">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left-close">
+                            <i class="material-icons">keyboard_backspace</i>
+                        </a>
+                    </div>
+                    <!--                    <div class="col center">
+                                            <a href="" class="logo">Best Rated</a>
+                                        </div>-->
+                </header>
+            </div>
+            <!-- sidebar right ends -->
+
+
+            <!-- page main start -->
+            <div class="page">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
+                    </div>
+                    <div class="col center">
+                        <a href="" class="logo">
+                            <figure><img src="img/LogoFinal1.png" alt=""></figure>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <!--<a href="javascript:void(0)" class="searchbtn"><i class="material-icons">search</i></a>-->
+                        <!--<a href="javascript:void(0)" class="menu-right"><i class="material-icons">person</i></a>-->
+                    </div>
+                </header>
+
+                <div class="page-content">
+                    <div class="content-sticky-footer">
+                        <div class="container">
+                            <h3 class="centrado texto_azul">Calidad del agua</h3>
+                            <p class="texto_azul">Ingrese los siguientes parámetros</p>
+                            <form name="form_calidad">
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="ph">PH</label>
+                                        <input type="number" class="form-control" id="ph" name="ph" ng-model="frm_calidad.ph"  placeholder="" required>
+                                        <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                    </div>    
+                                    <div class="form-group col-6">
+                                        <label for="alkalinidad">ALKALINIDAD</label>
+                                        <input type="number" class="form-control" id="alkalinidad" name="alkalinidad" ng-model="frm_calidad.alkalinidad"  placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="cloro_total">CLORO TOTAL</label>
+                                        <input type="number" class="form-control" id="cloro_total" name="cloro_total" ng-model="frm_calidad.cloro_total"  placeholder="">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="cloro_libre">CLORO LIBRE</label>
+                                        <input type="number" class="form-control" id="cloro_libre" name="cloro_libre" ng-model="frm_calidad.cloro_libre"  placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="acido_cianurico">ÁCIDO CIANÚRICO</label>
+                                        <input type="number" class="form-control" id="acido_cianurico" name="acido_cianurico" ng-model="frm_calidad.acido_cianurico"  placeholder="">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="dureza">DUREZA</label>
+                                        <input type="number" class="form-control" id="dureza" name="dureza" ng-model="frm_calidad.dureza"  placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center margen_sup_25px">
+                                    <button ng-disabled="form_calidad.$invalid" class="btn btn-warning" ng-click="enviar_parametros(frm_calidad);">enviar</button>    
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--BOTONES PRINCIPALES-->
+
+
+                    </div>
+
+
+
+
+                    <div class="footer-wrapper shadow-15">
+                        <div class="footer dark">
+                            <div class="row mx-0">
+                                <div class="col  text-center">
+                                    Piscina Segura S.A.S. - 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page main ends -->
+
+            <!-- Modal para mostrar sugerencia de parámetros-->
+            <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="aplicacionLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="aplicacionLabel">Parámetros de piscina</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Medida</th>
+                                        <th scope="col">Rango</th>
+                                        <th scope="col">Observación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">PH</th>
+                                        <td class="centrado fuente_11px">{{parametros.ph}}</td>
+                                        <td class="centrado fuente_11px">7.2</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Alkalinidad</th>
+                                        <td class="centrado fuente_11px">{{parametros.alkalinidad}}</td>
+                                        <td class="centrado fuente_11px">80</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Cloro Total</th>
+                                        <td class="centrado fuente_11px">{{parametros.cloro_total}}</td>
+                                        <td class="centrado fuente_11px">3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Cloro Libre</th>
+                                        <td class="centrado fuente_11px">{{parametros.cloro_libre}}</td>
+                                        <td class="centrado fuente_11px">3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Ácido Cianúrico</th>
+                                        <td class="centrado fuente_11px">{{parametros.acido_cianurico}}</td>
+                                        <td class="centrado fuente_11px">30-50</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Dureza</th>
+                                        <td class="centrado fuente_11px">{{parametros.dureza}}</td>
+                                        <td class="centrado fuente_11px">250-500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="modal-footer">
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>-->
+                            <button type="button" class="btn btn-primary">Aplicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="vendor/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- Cookie jquery file -->
+        <script src="vendor/cookie/jquery.cookie.js"></script>
+
+        <!-- sparklines chart jquery file -->
+        <script src="vendor/sparklines/jquery.sparkline.min.js"></script>
+
+        <!-- Circular progress gauge jquery file -->
+        <script src="vendor/circle-progress/circle-progress.min.js"></script>
+
+        <!-- Swiper carousel jquery file -->
+        <script src="vendor/swiper/js/swiper.min.js"></script>
+
+        <!-- Application main common jquery file -->
+        <script src="js/main.js"></script>
+
+        <!-- Angular JS -->
+        <script src="js/angular.min.js"></script>
+
+        <!-- Angular mAIN -->
+        <script src="js/angular-calidad_agua.js"></script>
+
+        <!-- page specific script -->
+        <script>
+
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" ng-app="piscina_segura">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+
+        <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+        <link rel="icon" href="img/f7-icon.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="vendor/bootstrap-4.1.3/css/bootstrap.min.css">
+
+        <!-- Material design icons CSS -->
+        <link rel="stylesheet" href="vendor/materializeicon/material-icons.css">
+
+        <!-- swiper carousel CSS -->
+        <link rel="stylesheet" href="vendor/swiper/css/swiper.min.css">
+
+        <!-- app CSS -->
+        <link id="theme" rel="stylesheet" href="css/style.css" type="text/css">
+
+
+        <title>Inventario</title>
+    </head>
+
+    <body class="color-theme-blue push-content-right theme-light" ng-controller="ctrl_body">
+        <div class="loader justify-content-center ">
+            <div class="maxui-roller align-self-center">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <!-- sidebar left start -->
+            <div class="sidebar sidebar-left">
+                <div class="profile-link">
+                    <a href="#" class="media">
+                        <div class="w-auto h-100">
+                            <figure class="avatar avatar-40">
+                                <img src="img/user1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-body">
+                            <h5 class=" mb-0">Usuario <span class="status-online bg-success"></span></h5>
+                            <p>Mentenimiento</p>
+                        </div>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="main.html" class="sidebar-close">
+                                <div class="item-title">
+                                    <i class="material-icons">home</i> Menú principal
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile-link text-center">
+                    <a href="login.html" class="btn btn-link text-white btn-block">SALIR</a>
+                </div>
+            </div>
+            <!-- sidebar left ends -->
+
+            <!-- sidebar right start -->
+            <div class="sidebar sidebar-right">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left-close">
+                            <i class="material-icons">keyboard_backspace</i>
+                        </a>
+                    </div>
+                    <!--                    <div class="col center">
+                                            <a href="" class="logo">Best Rated</a>
+                                        </div>-->
+                </header>
+            </div>
+            <!-- sidebar right ends -->
+
+
+            <!-- page main start -->
+            <div class="page">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
+                    </div>
+                    <div class="col center">
+                        <a href="" class="logo">
+                            <figure><img src="img/LogoFinal1.png" alt=""></figure>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <!--<a href="javascript:void(0)" class="searchbtn"><i class="material-icons">search</i></a>-->
+                        <!--<a href="javascript:void(0)" class="menu-right"><i class="material-icons">person</i></a>-->
+                    </div>
+                </header>
+
+                <div class="page-content">
+                    <div class="content-sticky-footer">
+                        <div class="container">
+                            <h2 class="texto_azul centrado">Inventario</h2>
+                            <div class="row mx-0">
+                                <div class="col">
+                                    <div id="accordion">
+                                        <div class="card mb-1 border-0 rounded-0">
+                                            <div class="card-header py-2" id="headingOne">
+                                                <a href="" class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <span>Cloro al 70%</span>
+                                                    <div class="margen_sup_5px progress mb-3">
+                                                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="dynamicsparkline">
+                                                                <canvas width="88" height="25"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-1 border-0 rounded-0">
+                                            <div class="card-header py-2" id="headingTwo">
+                                                <a href="" class=" collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <span>Cloro al 91%</span>
+                                                    <div class="margen_sup_5px progress mb-3">
+                                                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-1 border-0 rounded-0">
+                                            <div class="card-header py-2" id="headingThree">
+                                                <a href="" class=" collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <span>Bicarbonato de sodio</span>
+                                                    <div class="margen_sup_5px progress mb-3">
+                                                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                                        <div class="progress-bar bg-naranja" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-1 border-0 rounded-0">
+                                            <div class="card-header py-2" id="headingThree">
+                                                <a href="" class=" collapsed" data-toggle="collapse" data-target="#c4" aria-expanded="false" aria-controls="c4">
+                                                    <span>Soda cáustica</span>
+                                                    <div class="margen_sup_5px progress mb-3">
+                                                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="c4" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-1 border-0 rounded-0">
+                                            <div class="card-header py-2" id="headingThree">
+                                                <a href="" class=" collapsed" data-toggle="collapse" data-target="#c5" aria-expanded="false" aria-controls="c5">
+                                                    <span>Tiosulfato de sodio</span>
+                                                    <div class="margen_sup_5px progress mb-3">
+                                                        <!--<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="c5" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-wrapper shadow-15">
+                        <div class="footer dark">
+                            <div class="row mx-0">
+                                <div class="col  text-center">
+                                    Piscina Segura S.A.S. - 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page main ends -->
+
+            <!-- Modal para mostrar sugerencia de parámetros-->
+            <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="aplicacionLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="aplicacionLabel">Parámetros de piscina</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Medida</th>
+                                        <th scope="col">Rango</th>
+                                        <th scope="col">Observación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">PH</th>
+                                        <td class="centrado fuente_11px">{{parametros.ph}}</td>
+                                        <td class="centrado fuente_11px">7.2</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Alkalinidad</th>
+                                        <td class="centrado fuente_11px">{{parametros.alkalinidad}}</td>
+                                        <td class="centrado fuente_11px">80</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Cloro Total</th>
+                                        <td class="centrado fuente_11px">{{parametros.cloro_total}}</td>
+                                        <td class="centrado fuente_11px">3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Cloro Libre</th>
+                                        <td class="centrado fuente_11px">{{parametros.cloro_libre}}</td>
+                                        <td class="centrado fuente_11px">3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Ácido Cianúrico</th>
+                                        <td class="centrado fuente_11px">{{parametros.acido_cianurico}}</td>
+                                        <td class="centrado fuente_11px">30-50</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fuente_11px" scope="row">Dureza</th>
+                                        <td class="centrado fuente_11px">{{parametros.dureza}}</td>
+                                        <td class="centrado fuente_11px">250-500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="modal-footer">
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>-->
+                            <button type="button" class="btn btn-primary">Seleccionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="vendor/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- Cookie jquery file -->
+        <script src="vendor/cookie/jquery.cookie.js"></script>
+
+        <!-- sparklines chart jquery file -->
+        <script src="vendor/sparklines/jquery.sparkline.min.js"></script>
+
+        <!-- Circular progress gauge jquery file -->
+        <script src="vendor/circle-progress/circle-progress.min.js"></script>
+
+        <!-- Swiper carousel jquery file -->
+        <script src="vendor/swiper/js/swiper.min.js"></script>
+
+        <!-- Google chart js -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- Application main common jquery file -->
+        <script src="js/main.js"></script>
+
+        <!-- Angular JS -->
+        <script src="js/angular.min.js"></script>
+
+        <!-- Angular mAIN -->
+        <!--<script src="js/angular-inventarios.js"></script>-->
+
+        <!-- page specific script -->
+        <script>
+                                                    $(window).on('load', function () {
+                                                        /* sparklines */
+                                                        $(".dynamicsparkline").sparkline([5, 6, 7, 2, 0, 4, 2, 5, 6, 7, 2, 0, 4, 2, 4], {
+                                                            type: 'bar',
+                                                            height: '25',
+                                                            barSpacing: 2,
+                                                            barColor: '#a9d7fe',
+                                                            negBarColor: '#ef4055',
+                                                            zeroColor: '#ffffff'
+                                                        });
+
+                                                        /* tooltip */
+                                                        $(function () {
+                                                            $('[data-toggle="tooltip"]').tooltip()
+                                                        });
+
+                                                        /* Google chart */
+                                                        google.charts.load('current', {
+                                                            'packages': ['corechart']
+                                                        });
+                                                        google.charts.setOnLoadCallback(drawChart);
+
+                                                        function drawChart() {
+                                                            var data = google.visualization.arrayToDataTable([
+                                                                ['Year', 'Sales', 'Expenses'],
+                                                                ['2013', 1000, 400],
+                                                                ['2014', 1170, 460],
+                                                                ['2015', 660, 1120],
+                                                                ['2016', 1030, 540]
+                                                            ]);
+
+                                                            var options = {
+                                                                vAxis: {
+                                                                    minValue: 0
+                                                                },
+                                                                legend: {
+                                                                    position: 'top',
+                                                                    maxLines: 3
+                                                                },
+                                                                chartArea: {
+                                                                    left: 38,
+                                                                    top: 10,
+                                                                    bottom: 20,
+                                                                    width: '85%'
+                                                                }
+                                                            };
+
+                                                            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+                                                            chart.draw(data, options);
+                                                        }
+
+                                                    });
+
+        </script>
+    </body>
+
+</html>
