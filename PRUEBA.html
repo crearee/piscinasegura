@@ -118,7 +118,7 @@
             
                                         <form name="form_chequeo"> 
                                             <!--INICIO DE ACCORDION-->
-                                            <div id="accordion" ng-show="mostrar_accordion">
+                                            <div id="accordion">
             
                                                 <!--INICIO PRIMERA CATEGORÍA-->
                                                 <div class="card mb-1 border-0 rounded-0">
@@ -330,16 +330,12 @@
                                                                     <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
                                                                 </div>
                                                                 <div class="dropdown-divider"></div>
-
-                                                                
+                                                                <div class="row d-flex justify-content-center margen_sup_25px">
+                                                                    <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="calcular();">Calcular</button>    
+                                                                </div>
                                                             </div>
                                                             
                                                             <!--FIN DE TOMA DE MUESTRAS-->
-
-                                                            <div class="row d-flex justify-content-center margen_sup_25px">
-                                                                    <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="calcular();">Calcular</button>    
-                                                                </div>
-
                                                         </div>
                                                     </div>
                                                 </div>

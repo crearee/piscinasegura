@@ -6,6 +6,8 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
      * Temporal mientras se piensa si se carga una estructura base para los horarios
      */
 
+    $scope.mostrar_accordion = true;
+
     $scope.piscina = {
         "id": 111,
         "nom_piscina": "aaaaaa",
@@ -233,6 +235,8 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
 
     //----- Fórmulas para calidad del agua -----
     $scope.calcular = function () {
+        console.log("entrando al cálculo");
+
         var data = $scope.frm_chequeo.categorias[id_diagnostica].diagnostico;
         var volumen = $scope.piscina.volumen;
         var cloro_total = data[0].estado;
@@ -310,13 +314,13 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
 
         //----- Cloro libre ----
         if (cloro_libre < cloro_total_objetivo_min) {
-            $scope.sugerencia6.aplicar = volumen * (cloro_total_objetivo - cloro_libre) * 1.575;
+            $scope.sugerencia6.aplicar = volumen * (cloro_total_objetivo_min - cloro_libre) * 1.575;
             $scope.sugerencia6.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
-            $scope.sugerencia7.aplicar = volumen * (cloro_total_objetivo - cloro_libre) * 1.1;
+            $scope.sugerencia7.aplicar = volumen * (cloro_total_objetivo_min - cloro_libre) * 1.1;
             $scope.sugerencia7.producto = "Tricoloro / Cloro al 91%";
 
         } else if (cloro_libre > cloro_total_objetivo_max) {
-            $scope.sugerencia6.aplicar = volumen * (cloro_libre - cloro_total_objetivo) * 1.775;
+            $scope.sugerencia6.aplicar = volumen * (cloro_libre - cloro_total_objetivo_max) * 1.775;
             $scope.sugerencia6.producto = "Tiosulfato de sodio";
         }
 
@@ -336,26 +340,32 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
 
         //----- Cloro Combinado - Cloro libre menor que el cloro total-----
         //----- Ecuación para cloro punto de ruptura -----
-        if (cloro_libre > cloro_total) {
+        if (cloro_libre < cloro_total) {
             cloro_punto_ruptura = (cloro_combinado * 10) - cloro_libre;
             if (cloro_total < cloro_total_objetivo_min) {
                 $scope.sugerencia10.aplicar = volumen * cloro_punto_ruptura * 1.575;
                 $scope.sugerencia10.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
-                $scope.sugerencia11.aplicar = volumen * cloro_punto_ruptura * 1.1;
-                $scope.sugerencia11.producto = "Tricoloro / Cloro al 91%";
             }
         }
 
-
-
-
-
-
+        $('#modalAplicacion').modal('show');
 
     };
 
 
+    $scope.dosificacion = function () {
 
+        $('#modalAplicacion').modal('show');
+    };
+
+    $scope.ir = function () {
+        location.href = $scope.destino;
+    };
+
+    $scope.cerrar_modal = function () {
+
+        $('#modalAplicacion').modal('hide');
+    };
 
 
 

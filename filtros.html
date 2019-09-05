@@ -4,7 +4,8 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
 
         <link rel="apple-touch-icon" href="img/f7-icon-square.png">
         <link rel="icon" href="img/f7-icon.png">
@@ -108,26 +109,30 @@
                     <div class="content-sticky-footer">
                         <div class="container">
                             <h3 class="centrado texto_azul">Control de Filtros</h3>
-                            <p class="texto_azul  margen_inf_15px">Seleccione la hora de encendido y apagado de los filtros</p>
+                            <p class="texto_azul  margen_inf_15px">Seleccione la hora de encendido y apagado de los
+                                filtros</p>
 
                             <form name="form_filtros">
                                 <p>Encendido</p>
 
                                 <div class="form-group">
                                     <label for="hora_on">Hora</label>
-                                    <input type="time" class="form-control" id="hora_on" name="hora_on" ng-model="frm_filtros.hora_on">
+                                    <input type="time" class="form-control" id="hora_on" name="hora_on"
+                                        ng-model="frm_filtros.hora_on">
                                 </div>
-                                
+
                                 <p>Apagado</p>
 
                                 <div class="form-group">
                                     <label for="hora_off">Hora</label>
-                                    <input type="time" class="form-control" id="hora_off" name="hora_off" ng-model="frm_filtros.hora_off">
+                                    <input type="time" class="form-control" id="hora_off" name="hora_off"
+                                        ng-model="frm_filtros.hora_off">
                                 </div>
-                                
-                                                            
+
+
                                 <div class="row d-flex justify-content-center margen_sup_25px">
-                                    <button ng-disabled="form_filtros.$invalid" class="btn btn-warning" ng-click="enviar_filtros(frm_filtros);">enviar</button>    
+                                    <button ng-disabled="form_filtros.$invalid" class="btn btn-warning"
+                                        ng-click="enviar_filtros(frm_filtros);">enviar</button>
                                 </div>
 
                             </form>
@@ -155,7 +160,8 @@
             <!-- page main ends -->
 
             <!-- Modal para mostrar sugerencia de parámetros-->
-            <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="aplicacionLabel" aria-hidden="true">
+            <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="aplicacionLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
