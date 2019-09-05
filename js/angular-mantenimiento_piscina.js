@@ -6,6 +6,11 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
      * Temporal mientras se piensa si se carga una estructura base para los horarios
      */
 
+    $scope.piscina = {
+        "id": 111,
+        "nom_piscina": "aaaaaa",
+        "volumen": 33
+    };
 
     $scope.num_categoria =
         {
@@ -19,19 +24,25 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
     $scope.final = {
         "categorias": [
             {
-                "tareas": []
+                "tareas": [],
+                "tareas2": [],
+                "tareas3": [],
+            },
+            {
+                "tareas": [],
+                "diagnostico": [],
             },
             {
                 "tareas": []
             },
             {
-                "tareas": []
+                "tareas": [],
+                "tareas2": [],
+                "tareas3": []
             },
             {
-                "tareas": []
-            },
-            {
-                "tareas": []
+                "tareas": [],
+                "tareas2": []
             }
         ]
 
@@ -72,7 +83,6 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
                         { "id": 12, "opcion1": "Mide y dosifica el ácido correctamente", "opcion2": "No dosifica correctamente", "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Dosificador de ácido" },
                         { "id": 14, "opcion1": "La presion adecuada a lo definido en el manual", "opcion2": "Filtro con corrosión y/o perdidas de presion", "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Inspección visual de los filtros en busca de corrosión o perdidas de presion" }
                     ]
-
             },
             {
                 "nom_categoria": "Prueba Diagnóstica",
@@ -90,8 +100,9 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
                         { "id": 4, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Cloro combinado" },
                         { "id": 6, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "PH" },
                         { "id": 8, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Temperatura del agua (°C)" },
-                        { "id": 10, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Dureza total" },
-                        { "id": 12, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Alcalinidad total" }
+                        { "id": 10, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Ácido Cianúrico" },
+                        { "id": 12, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Dureza total" },
+                        { "id": 14, "frecuencia": "", "observaciones": "", "estado": "", "nom_tarea": "Alcalinidad total" }
                     ]
             },
             {
@@ -169,6 +180,193 @@ app.controller('ctrl_body', ['$scope', '$http', '$templateCache', function ($sco
         $scope.final.categorias[id_aseo].tareas[$index] = $scope.frm_chequeo.categorias[id_aseo].tareas[$index];
         console.log(JSON.stringify($scope.final));
     };
+    $scope.duplicar_tarea_aseo2 = function ($index) {
+        $scope.final.categorias[id_aseo].tareas2[$index] = $scope.frm_chequeo.categorias[id_aseo].tareas2[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+    $scope.duplicar_tarea_aseo3 = function ($index) {
+        $scope.final.categorias[id_aseo].tareas3[$index] = $scope.frm_chequeo.categorias[id_aseo].tareas3[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+
+    var id_diagnostica = 1;
+    $scope.duplicar_tarea_diagnostica = function ($index) {
+        $scope.final.categorias[id_diagnostica].tareas[$index] = $scope.frm_chequeo.categorias[id_diagnostica].tareas[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+    $scope.duplicar_tarea_diagnostica2 = function ($index) {
+        $scope.final.categorias[id_diagnostica].diagnostico[$index] = $scope.frm_chequeo.categorias[id_diagnostica].diagnostico[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+
+    var id_seguridad = 2;
+    $scope.duplicar_tarea_seguridad = function ($index) {
+        $scope.final.categorias[id_seguridad].tareas[$index] = $scope.frm_chequeo.categorias[id_seguridad].tareas[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+
+    var id_aseo_semanal = 3;
+    $scope.duplicar_tarea_aseo_semanal = function ($index) {
+        $scope.final.categorias[id_aseo_semanal].tareas[$index] = $scope.frm_chequeo.categorias[id_aseo_semanal].tareas[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+    $scope.duplicar_tarea_aseo_semanal2 = function ($index) {
+        $scope.final.categorias[id_aseo_semanal].tareas2[$index] = $scope.frm_chequeo.categorias[id_aseo_semanal].tareas2[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+    $scope.duplicar_tarea_aseo_semanal3 = function ($index) {
+        $scope.final.categorias[id_aseo_semanal].tareas2[$index] = $scope.frm_chequeo.categorias[id_aseo_semanal].tareas3[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+
+    var id_botiquin = 4;
+    $scope.duplicar_tarea_botiquin = function ($index) {
+        $scope.final.categorias[id_botiquin].tareas[$index] = $scope.frm_chequeo.categorias[id_botiquin].tareas[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+    $scope.duplicar_tarea_botiquin2 = function ($index) {
+        $scope.final.categorias[id_botiquin].tareas2[$index] = $scope.frm_chequeo.categorias[id_botiquin].tareas2[$index];
+        console.log(JSON.stringify($scope.final));
+    };
+
+
+
+    //----- Fórmulas para calidad del agua -----
+    $scope.calcular = function () {
+        var data = $scope.frm_chequeo.categorias[id_diagnostica].diagnostico;
+        var volumen = $scope.piscina.volumen;
+        var cloro_total = data[0].estado;
+        var cloro_libre = data[1].estado;
+        var cloro_combinado = cloro_total - cloro_libre;
+        $scope.frm_chequeo.categorias[id_diagnostica].diagnostico[2].estado = cloro_combinado;
+        var ph = data[3].estado;
+        var acido_cianurico = data[5].estado;
+        var dureza = data[6].estado;
+        var alcalinidad = data[7].estado;
+        var cloro_punto_ruptura;
+
+        //----- Constantes objetivos o rangos permitidos -----
+        var ph_objetivo = 7.2;
+        var alcalinidad_objetivo = 80;
+        var cloro_total_objetivo_min = 3;
+        var cloro_total_objetivo_max = 5;
+        var acido_cianurico_min = 30;
+        var acido_cianurico_max = 50;
+        var dureza_min = 250;
+        var dureza_max = 500;
+
+        $scope.sugerencia1 = {};  //----- PH
+        $scope.sugerencia2 = {};  //----- PH    
+        $scope.sugerencia3 = {};  //----- Alcalinidad
+        $scope.sugerencia4 = {};  //----- Cloro Total
+        $scope.sugerencia5 = {};  //----- Cloro Total
+        $scope.sugerencia6 = {};  //----- Cloro libre
+        $scope.sugerencia7 = {};  //----- Cloro libre
+        $scope.sugerencia8 = {};  //----- Ácido Cianúrico
+        $scope.sugerencia9 = {};  //----- Dureza 
+        $scope.sugerencia10 = {};  //----- Cloro combinado 
+        $scope.sugerencia11 = {};  //----- Cloro combinado 
+
+        //-----Primero estabilizar PH -----
+        if (ph < 7.2) {
+            $scope.sugerencia1.aplicar = volumen * (ph_objetivo - ph) * 1.675;  //----- K para bicarbonato-----
+            $scope.sugerencia1.producto = "Bicarbonato de Sodio / Alcali";
+            if (ph == 6.5) {
+                $scope.sugerencia2.producto = "Soda Cáustica";                                //----- Cálculo para soda cáustica -----
+                $scope.sugerencia2.aplicar = 5 * volumen;
+            } else if (ph == 6.8) {
+                $scope.sugerencia2.producto = "Soda Cáustica";
+                $scope.sugerencia2.aplicar = 4 * volumen;
+            } else if (ph == 7) {
+                $scope.sugerencia2.producto = "Soda Cáustica";
+                $scope.sugerencia2.aplicar = 3 * volumen;
+            }
+
+        } else if (ph > 7.2) {
+            $scope.sugerencia1.aplicar = volumen * (ph - ph_objetivo) * 1.1;
+            $scope.sugerencia1.producto = "Tricoloro / Cloro al 91%";
+        }
+
+        //----- Alcalinidad -----
+        if (alcalinidad > alcalinidad_objetivo) {
+            $scope.sugerencia3.aplicar = volumen * (alcalinidad - alcalinidad_objetivo) * 1.1;
+            $scope.sugerencia3.producto = "Tricoloro / Cloro al 91%";
+        } else {
+            $scope.sugerencia3.aplicar = volumen * (alcalinidad - alcalinidad_objetivo) * 1.675;
+            $scope.sugerencia3.producto = "Bicarbonato de Sodio / Alcali";
+        }
+
+        //----- Cloro total ----
+        if (cloro_total < cloro_total_objetivo_min) {
+            $scope.sugerencia4.aplicar = volumen * (cloro_total_objetivo_min - cloro_total) * 1.575;
+            $scope.sugerencia4.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
+            $scope.sugerencia5.aplicar = volumen * (cloro_total_objetivo_min - cloro_total) * 1.1;
+            $scope.sugerencia5.producto = "Tricoloro / Cloro al 91%";
+
+        } else if (cloro_total > cloro_total_objetivo_max) {
+            $scope.sugerencia4.aplicar = volumen * (cloro_total - cloro_total_objetivo_max) * 1.775;
+            $scope.sugerencia4.producto = "Tiosulfato de sodio";
+        }
+
+        //----- Cloro libre ----
+        if (cloro_libre < cloro_total_objetivo_min) {
+            $scope.sugerencia6.aplicar = volumen * (cloro_total_objetivo - cloro_libre) * 1.575;
+            $scope.sugerencia6.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
+            $scope.sugerencia7.aplicar = volumen * (cloro_total_objetivo - cloro_libre) * 1.1;
+            $scope.sugerencia7.producto = "Tricoloro / Cloro al 91%";
+
+        } else if (cloro_libre > cloro_total_objetivo_max) {
+            $scope.sugerencia6.aplicar = volumen * (cloro_libre - cloro_total_objetivo) * 1.775;
+            $scope.sugerencia6.producto = "Tiosulfato de sodio";
+        }
+
+        //----- Ácido cianúrico ----
+        if (acido_cianurico < acido_cianurico_min) {
+            $scope.sugerencia8.aplicar = volumen * (acido_cianurico_min - acido_cianurico) * 1.1;
+            $scope.sugerencia8.producto = "Tricoloro / Cloro al 91%";
+        }
+
+        //----- Dureza -----
+        if (dureza < dureza_min) {
+            $scope.sugerencia9.aplicar = volumen * (dureza_min - dureza) * 1.575;
+            $scope.sugerencia9.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
+        } else if (dureza > dureza_max) {
+            $scope.sugerencia9.producto = "RENOVAR AGUA";
+        }
+
+        //----- Cloro Combinado - Cloro libre menor que el cloro total-----
+        //----- Ecuación para cloro punto de ruptura -----
+        if (cloro_libre > cloro_total) {
+            cloro_punto_ruptura = (cloro_combinado * 10) - cloro_libre;
+            if (cloro_total < cloro_total_objetivo_min) {
+                $scope.sugerencia10.aplicar = volumen * cloro_punto_ruptura * 1.575;
+                $scope.sugerencia10.producto = "Hipoclorito de Calcio 70% / Cloro 70%";
+                $scope.sugerencia11.aplicar = volumen * cloro_punto_ruptura * 1.1;
+                $scope.sugerencia11.producto = "Tricoloro / Cloro al 91%";
+            }
+        }
+
+
+
+
+
+
+
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //----- Actualiza el estado de las labores de mantenimiento -----
     $scope.enviar_informacion = function () {

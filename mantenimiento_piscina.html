@@ -187,13 +187,13 @@
                                                             <div class="row">
                                                                 <div class="col-5">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id}}" ng-model="tarea.estado" value="{{tarea.opcion1}}">
+                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion1}}">
                                                                         <label class="custom-control-label" for="aseo_general2-{{tarea.id}}">{{tarea.opcion1}}</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-7">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id + 1}}" ng-model="tarea.estado" value="{{tarea.opcion2}}">
+                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion2}}">
                                                                         <label class="custom-control-label" for="aseo_general2-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
                                                                     </div>
                                                                 </div>
@@ -228,13 +228,13 @@
                                                             <div class="row">
                                                                 <div class="col-12">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id}}" ng-model="tarea.estado" value="{{tarea.opcion1}}">
+                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion1}}">
                                                                         <label class="custom-control-label" for="aseo_general3-{{tarea.id}}">{{tarea.opcion1}}</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-12">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id + 1}}" ng-model="tarea.estado" value="{{tarea.opcion2}}">
+                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion2}}">
                                                                         <label class="custom-control-label" for="aseo_general3-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
                                                                     </div>
                                                                 </div>
@@ -281,13 +281,13 @@
                                                             <div class="row">
                                                                 <div class="col-12">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id}}" ng-model="tarea.estado" value="{{tarea.opcion1}}">
+                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);" value="{{tarea.opcion1}}">
                                                                         <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id}}">{{tarea.opcion1}}</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-12">
                                                                     <div class="custom-control custom-radio">
-                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id + 1}}" ng-model="tarea.estado" value="{{tarea.opcion2}}">
+                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);"  value="{{tarea.opcion2}}">
                                                                         <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
                                                                     </div>
                                                                 </div>
@@ -320,13 +320,16 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <input type="text" class="form-control" ng-model="tarea.estado">
+                                                                    <input ng-disabled="$index == 2" type="text" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group margen_sup_5px" ng-show="mostrar5_[$index]">
                                                                 <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
                                                             </div>
                                                             <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <div class="row d-flex justify-content-center margen_sup_25px">
+                                                            <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="calcular();">Calcular</button>    
                                                         </div>
                                                         <!--FIN DE TOMA DE MUESTRAS-->
                                                     </div>
@@ -360,7 +363,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-6 margen_inf_15px">
-                                                                    <label>estado</label>
+                                                                    <label>Cantidad</label>
                                                                     <input type="number" class="form-control" ng-model="tarea.estado">
                                                                 </div>
                                                                 <div class="col-s6">
