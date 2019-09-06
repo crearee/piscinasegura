@@ -5,7 +5,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+              content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
 
         <link rel="apple-touch-icon" href="img/f7-icon-square.png">
         <link rel="icon" href="img/f7-icon.png">
@@ -41,626 +41,632 @@
         </div>
 
         <div class="wrapper">
-                <!-- sidebar left start -->
-                <div class="sidebar sidebar-left">
-                    <div class="profile-link">
-                        <a href="#" class="media">
-                            <div class="w-auto h-100">
-                                <figure class="avatar avatar-40">
-                                    <img src="img/user1.png" alt="">
-                                </figure>
-                            </div>
-                            <div class="media-body">
-                                <h5 class=" mb-0">Usuario <span class="status-online bg-success"></span></h5>
-                                <p>Mentenimiento</p>
-                            </div>
+            <!-- sidebar left start -->
+            <div class="sidebar sidebar-left">
+                <div class="profile-link">
+                    <a href="#" class="media">
+                        <div class="w-auto h-100">
+                            <figure class="avatar avatar-40">
+                                <img src="img/user1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-body">
+                            <h5 class=" mb-0">Usuario <span class="status-online bg-success"></span></h5>
+                            <p>Mentenimiento</p>
+                        </div>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="main.html" class="sidebar-close">
+                                <div class="item-title">
+                                    <i class="material-icons">home</i> Menú principal
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile-link text-center">
+                    <a href="login.html" class="btn btn-link text-white btn-block">SALIR</a>
+                </div>
+            </div>
+            <!-- sidebar left ends -->
+
+            <!-- sidebar right start -->
+            <div class="sidebar sidebar-right">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left-close">
+                            <i class="material-icons">keyboard_backspace</i>
                         </a>
                     </div>
-                    <nav class="navbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="main.html" class="sidebar-close">
-                                    <div class="item-title">
-                                        <i class="material-icons">home</i> Menú principal
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="profile-link text-center">
-                        <a href="login.html" class="btn btn-link text-white btn-block">SALIR</a>
+                    <!--                    <div class="col center">
+                                            <a href="" class="logo">Best Rated</a>
+                                        </div>-->
+                </header>
+            </div>
+            <!-- sidebar right ends -->
+
+
+            <!-- page main start -->
+            <div class="page">
+                <header class="row m-0 fixed-header">
+                    <div class="left">
+                        <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
                     </div>
-                </div>
-                <!-- sidebar left ends -->
-            
-                <!-- sidebar right start -->
-                <div class="sidebar sidebar-right">
-                    <header class="row m-0 fixed-header">
-                        <div class="left">
-                            <a href="javascript:void(0)" class="menu-left-close">
-                                <i class="material-icons">keyboard_backspace</i>
-                            </a>
-                        </div>
-                        <!--                    <div class="col center">
-                                                <a href="" class="logo">Best Rated</a>
-                                            </div>-->
-                    </header>
-                </div>
-                <!-- sidebar right ends -->
-            
-            
-                <!-- page main start -->
-                <div class="page">
-                    <header class="row m-0 fixed-header">
-                        <div class="left">
-                            <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
-                        </div>
-                        <div class="col center">
-                            <a href="" class="logo">
-                                <figure><img src="img/LogoFinal1.png" alt=""></figure>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <!--<a href="javascript:void(0)" class="searchbtn"><i class="material-icons">search</i></a>-->
-                            <!--<a href="javascript:void(0)" class="menu-right"><i class="material-icons">person</i></a>-->
-                        </div>
-                    </header>
-            
-                    <div class="page-content">
-                        <div class="content-sticky-footer">
-                            <div class="container">
-                                <h3 class="centrado texto_azul">Lista de chequeo</h3>
-                                <p class="texto_azul justificado">Seleccione las listas de chequeo e ingrese los datos en el formulario correspondiente</p>
-                                <div class="row mx-0">
-                                    <div class="col">
-            
-                                        <!--FORMULARIO GENERAL-->
-            
-                                        <form name="form_chequeo"> 
-                                            <!--INICIO DE ACCORDION-->
-                                            <div id="accordion" ng-show="mostrar_accordion">
-            
-                                                <!--INICIO PRIMERA CATEGORÍA-->
-                                                <div class="card mb-1 border-0 rounded-0">
-                                                    <div class="card-header py-2" id="headingOne">
-                                                        <a href="" class="" data-toggle="collapse" data-target="#ac1" aria-expanded="true" aria-controls="ac1">
-                                                            Aseo General
-                                                        </a>
-                                                    </div>
-            
-                                                    <div id="ac1" class="collapse" data-parent="#accordion">
-                                                        <div class="card-body">
-            
-                                                            <!--TAREA 1-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas">
-                                                                <div class="row" ng-init="mostrar1_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar1_[$index] = !mostrar1_[$index]">
-                                                                            <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
+                    <div class="col center">
+                        <a href="" class="logo">
+                            <figure><img src="img/LogoFinal1.png" alt=""></figure>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <!--<a href="javascript:void(0)" class="searchbtn"><i class="material-icons">search</i></a>-->
+                        <!--<a href="javascript:void(0)" class="menu-right"><i class="material-icons">person</i></a>-->
+                    </div>
+                </header>
+
+                <div class="page-content">
+                    <div class="content-sticky-footer">
+                        <div class="container" ng-show="mostrar_inicial">
+                            <h3 class="centrado texto_azul">Lista de chequeo</h3>
+                            <p class="texto_azul justificado">Seleccione las listas de chequeo e ingrese los datos en el formulario correspondiente</p>
+                            <div class="row mx-0">
+                                <div class="col">
+
+                                    <!--FORMULARIO GENERAL-->
+
+                                    <form name="form_chequeo"> 
+                                        <!--INICIO DE ACCORDION-->
+                                        <div id="accordion">
+
+                                            <!--INICIO PRIMERA CATEGORÍA-->
+                                            <div class="card mb-1 border-0 rounded-0">
+                                                <div class="card-header py-2" id="headingOne">
+                                                    <a href="" class="" data-toggle="collapse" data-target="#ac1" aria-expanded="true" aria-controls="ac1">
+                                                        Aseo General
+                                                    </a>
+                                                </div>
+
+                                                <div id="ac1" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+
+                                                        <!--TAREA 1-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas">
+                                                            <div class="row" ng-init="mostrar1_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-6">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="realizado">
-                                                                            <label class="custom-control-label" for="aseo_general-{{tarea.id}}">Realizado</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="pendiente">
-                                                                            <label class="custom-control-label" for="aseo_general-{{tarea.id + 1}}">Pendiente</label>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
-                                                                <div class="form-group" ng-show="mostrar1_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar1_[$index] = !mostrar1_[$index]">
+                                                                        <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
                                                                 </div>
-                                                                <div class="dropdown-divider"></div>
                                                             </div>
-                                                            <!--FIN TAREA 1-->
-            
-                                                            <div class="row d-flex justify-content-center">
-                                                                <p class="centrado texto_azul bg-gris">DOSIFICACIÓN</P>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="realizado">
+                                                                        <label class="custom-control-label" for="aseo_general-{{tarea.id}}">Realizado</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general-{{tarea.id}}" class="custom-control-input" id="aseo_general-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo($index);" value="pendiente">
+                                                                        <label class="custom-control-label" for="aseo_general-{{tarea.id + 1}}">Pendiente</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" ng-show="mostrar1_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_aseo($index);"></textarea>
                                                             </div>
                                                             <div class="dropdown-divider"></div>
-            
-                                                            <!--TAREA 2-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas2">
-                                                                <div class="row" ng-init="mostrar2_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar2_[$index] = !mostrar2_[$index]">
-                                                                            <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
+                                                        </div>
+                                                        <!--FIN TAREA 1-->
+
+                                                        <div class="row d-flex justify-content-center">
+                                                            <p class="centrado texto_azul bg-gris">DOSIFICACIÓN</P>
+                                                        </div>
+                                                        <div class="dropdown-divider"></div>
+
+                                                        <!--TAREA 2-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas2">
+                                                            <div class="row" ng-init="mostrar2_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-5">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion1}}">
-                                                                            <label class="custom-control-label" for="aseo_general2-{{tarea.id}}">{{tarea.opcion1}}</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-7">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion2}}">
-                                                                            <label class="custom-control-label" for="aseo_general2-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
                                                                 </div>
-                                                                <div class="form-group" ng-show="mostrar2_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar2_[$index] = !mostrar2_[$index]">
+                                                                        <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
                                                                 </div>
-                                                                <div class="dropdown-divider"></div>
                                                             </div>
-                                                            <!--FIN TAREA 2-->
-            
-                                                            <div class="row d-flex justify-content-center">
-                                                                <p class="centrado texto_azul bg-gris">REVISIÓN CUARTO DE MÁQUINAS</P>
+                                                            <div class="row">
+                                                                <div class="col-5">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion1}}">
+                                                                        <label class="custom-control-label" for="aseo_general2-{{tarea.id}}">{{tarea.opcion1}}</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-7">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general2-{{tarea.id}}" class="custom-control-input" id="aseo_general2-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo2($index);" value="{{tarea.opcion2}}">
+                                                                        <label class="custom-control-label" for="aseo_general2-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" ng-show="mostrar2_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_aseo2($index);"></textarea>
                                                             </div>
                                                             <div class="dropdown-divider"></div>
-            
-                                                            <!--TAREA 3-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas3">
-                                                                <div class="row" ng-init="mostrar3_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar3_[$index] = !mostrar3_[$index]">
-                                                                            <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion1}}">
-                                                                            <label class="custom-control-label" for="aseo_general3-{{tarea.id}}">{{tarea.opcion1}}</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion2}}">
-                                                                            <label class="custom-control-label" for="aseo_general3-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group" ng-show="mostrar3_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREA 3-->
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <!--FIN PRIMERA CATEGORÍA-->
-            
-                                                <!--INICIO SEGUNDA CATEGORÍA-->
-                                                <div class="card mb-1 border-0 rounded-0">
-                                                    <div class="card-header py-2" id="headingTwo">
-                                                        <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac2" aria-expanded="false" aria-controls="ac2">
-                                                            Prueba diagnóstica
-                                                        </a>
-                                                    </div>
-                                                    <div id="ac2" class="collapse" data-parent="#accordion">
-                                                        <div class="card-body">
-                                                            <div class="row d-flex justify-content-center">
-                                                                <p class="centrado texto_azul bg-gris">Características físicas del agua de estanque de piscinas y estructura similar</P>
-                                                            </div>
-            
-                                                            <!--TAREAS-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.prueba_diagnostica].tareas">
-                                                                <div class="row" ng-init="mostrar4_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar4_[$index] = !mostrar4_[$index]">
-                                                                            <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);" value="{{tarea.opcion1}}">
-                                                                            <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id}}">{{tarea.opcion1}}</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <div class="custom-control custom-radio">
-                                                                            <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);"  value="{{tarea.opcion2}}">
-                                                                            <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group" ng-show="mostrar4_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN DE TAREAS-->
-            
-                                                            <div class="row d-flex justify-content-center">
-                                                                <p class="centrado texto_azul bg-gris">Características químicas del agua de estanque piscina estructura similar</P>
-                                                            </div>
-            
-                                                            <!--INICIO DE TOMA DE MUESTRAS-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.prueba_diagnostica].diagnostico">
-                                                                <div class="row" ng-init="mostrar5_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar5_[$index] = !mostrar5_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <input ng-disabled="$index == 2" type="text" class="form-control" ng-model="tarea.estado">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar5_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
+                                                        <!--FIN TAREA 2-->
 
-                                                                
-                                                            </div>
-                                                            
-                                                            <!--FIN DE TOMA DE MUESTRAS-->
+                                                        <div class="row d-flex justify-content-center">
+                                                            <p class="centrado texto_azul bg-gris">REVISIÓN CUARTO DE MÁQUINAS</P>
+                                                        </div>
+                                                        <div class="dropdown-divider"></div>
 
-                                                            <div class="row d-flex justify-content-center margen_sup_25px">
-                                                                    <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="calcular();">Calcular</button>    
+                                                        <!--TAREA 3-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_general].tareas3">
+                                                            <div class="row" ng-init="mostrar3_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
                                                                 </div>
-
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar3_[$index] = !mostrar3_[$index]">
+                                                                        <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion1}}">
+                                                                        <label class="custom-control-label" for="aseo_general3-{{tarea.id}}">{{tarea.opcion1}}</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_general3-{{tarea.id}}" class="custom-control-input" id="aseo_general3-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo3($index);" value="{{tarea.opcion2}}">
+                                                                        <label class="custom-control-label" for="aseo_general3-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" ng-show="mostrar3_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_aseo3($index);"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <!--FIN SEGUNDA CATEGORÍA-->
-            
-                                                <!--INICIO TERCERA CATEGORÍA-->
-                                                <div class="card mb-1 border-0 rounded-0">
-                                                    <div class="card-header py-2" id="headingThree">
-                                                        <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac5" aria-expanded="false" aria-controls="ac5">
-                                                            Elementos de seguridad
-                                                        </a>
-                                                    </div>
-                                                    <div id="ac5" class="collapse" data-parent="#accordion">
-                                                        <div class="card-body">
-                                                            <!--INICIO DE ELEMENTOS DE SEGURIDAD-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.elementos_seguridad].tareas">
-                                                                <div class="row" ng-init="mostrar6_[$index] = false;">
-                                                                    <div class="col-2">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar6_[$index] = !mostrar6_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 margen_inf_15px">
-                                                                        <label>Cantidad</label>
-                                                                        <input type="number" class="form-control" ng-model="tarea.estado">
-                                                                    </div>
-                                                                    <div class="col-s6">
-                                                                        <label>Se evidencia</label>
-                                                                        <div class="row">
-                                                                            <div class="col-12">
-                                                                                <div class="custom-control custom-radio">
-                                                                                    <input type="radio" name="elementos_seguridad-{{tarea.id}}" class="custom-control-input" id="elementos_seguridad-{{tarea.id}}" ng-model="tarea.evidencia" value="Sí">
-                                                                                    <label class="custom-control-label" for="elementos_seguridad-{{tarea.id}}">Sí</label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-12">
-                                                                                <div class="custom-control custom-radio">
-                                                                                    <input type="radio" name="elementos_seguridad-{{tarea.id}}" class="custom-control-input" id="elementos_seguridad-{{tarea.id + 1}}" ng-model="tarea.evidencia" value="No">
-                                                                                    <label class="custom-control-label" for="elementos_seguridad-{{tarea.id + 1}}">No</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar6_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN DE ELEMENTOS DE SEGURIDAD-->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--FIN TERCERA CATEGORÍA-->
-            
-                                                <!--INICIO CUARTA CATEGORÍA-->
-                                                <div class="card mb-1 border-0 rounded-0">
-                                                    <div class="card-header py-2" id="headingThree">
-                                                        <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac3" aria-expanded="false" aria-controls="ac3">
-                                                            Aseo semanal
-                                                        </a>
-                                                    </div>
-                                                    <div id="ac3" class="collapse" data-parent="#accordion">
-                                                        <div class="card-body">
-                                                            <p class="texto_azul bg-gris">CUARTO DE QUÍMICOS</p>
-            
-                                                            <!--INICIO DE ASEO SEMANAL-->
-                                                            <!--INICIO TAREAS 1-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas">
-                                                                <div class="row" ng-init="mostrar7_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar7_[$index] = !mostrar7_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="l-{{tarea.id}}" ng-model="tarea.dias.l" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="l-{{tarea.id}}">L</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px"> 
-                                                                            <input class="form-check-input" type="checkbox" id="m-{{tarea.id}}" ng-model="tarea.dias.m" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="m-{{tarea.id}}">M</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="mi-{{tarea.id}}" ng-model="tarea.dias.mi" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="mi-{{tarea.id}}">MI</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="j-{{tarea.id}}" ng-model="tarea.dias.j" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="j-{{tarea.id}}">J</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="v-{{tarea.id}}" ng-model="tarea.dias.v" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="v-{{tarea.id}}">V</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="s-{{tarea.id}}" ng-model="tarea.dias.s" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="s-{{tarea.id}}">S</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px margen_inf_10px">
-                                                                            <input class="form-check-input" type="checkbox" id="d-{{tarea.id}}" ng-model="tarea.dias.d" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="d-{{tarea.id}}">D</label>
-                                                                        </div>
-                                                                    </div>    
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar7_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREAS 1-->
-                                                            
-                                                            <p class="texto_azul bg-gris">CUARTO DE MÁQUINAS</p>
-                                                            <!--INICIO TAREAS 2-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas2">
-                                                                <div class="row" ng-init="mostrar8_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar8_[$index] = !mostrar8_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="l-{{tarea.id}}" ng-model="tarea.dias.l" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="l-{{tarea.id}}">L</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px"> 
-                                                                            <input class="form-check-input" type="checkbox" id="m-{{tarea.id}}" ng-model="tarea.dias.m" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="m-{{tarea.id}}">M</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="mi-{{tarea.id}}" ng-model="tarea.dias.mi" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="mi-{{tarea.id}}">MI</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="j-{{tarea.id}}" ng-model="tarea.dias.j" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="j-{{tarea.id}}">J</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="v-{{tarea.id}}" ng-model="tarea.dias.v" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="v-{{tarea.id}}">V</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="s-{{tarea.id}}" ng-model="tarea.dias.s" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="s-{{tarea.id}}">S</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px margen_inf_10px">
-                                                                            <input class="form-check-input" type="checkbox" id="d-{{tarea.id}}" ng-model="tarea.dias.d" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="d-{{tarea.id}}">D</label>
-                                                                        </div>
-                                                                    </div>    
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar8_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREAS 2-->
-                                                            
-                                                            <p class="texto_azul bg-gris">ESTANQUE</p>
-                                                            <!--INICIO TAREAS 3-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas3">
-                                                                <div class="row" ng-init="mostrar9_[$index] = false;">
-                                                                    <div class="col-1">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar9_[$index] = !mostrar9_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="l-{{tarea.id}}" ng-model="tarea.dias.l" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="l-{{tarea.id}}">L</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px"> 
-                                                                            <input class="form-check-input" type="checkbox" id="m-{{tarea.id}}" ng-model="tarea.dias.m" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="m-{{tarea.id}}">M</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="mi-{{tarea.id}}" ng-model="tarea.dias.mi" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="mi-{{tarea.id}}">MI</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="j-{{tarea.id}}" ng-model="tarea.dias.j" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="j-{{tarea.id}}">J</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="v-{{tarea.id}}" ng-model="tarea.dias.v" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="v-{{tarea.id}}">V</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px">
-                                                                            <input class="form-check-input" type="checkbox" id="s-{{tarea.id}}" ng-model="tarea.dias.s" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="s-{{tarea.id}}">S</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline margen_der_5px margen_inf_10px">
-                                                                            <input class="form-check-input" type="checkbox" id="d-{{tarea.id}}" ng-model="tarea.dias.d" style="margin-right: 3px !important;">
-                                                                            <label class="form-check-label" for="d-{{tarea.id}}">D</label>
-                                                                        </div>
-                                                                    </div>    
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar9_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREAS 3-->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--FIN CUARTA CATEGORÍA-->
-                                                
-                                                <!--INICIO QUINTA CATEGORÍA-->
-                                                <div class="card mb-1 border-0 rounded-0">
-                                                    <div class="card-header py-2" id="headingThree">
-                                                        <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac4" aria-expanded="false" aria-controls="ac4">
-                                                            Botiquín
-                                                        </a>
-                                                    </div>
-                                                    
-                                                    <div id="ac4" class="collapse" data-parent="#accordion">
-                                                        <div class="card-body">
-                                                            <p class="centrado texto_azul bg-gris">Cantidades de elementos esenciales de un botiquín</p>
-                                                            <!--INICIO TAREA 1-->
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.botiquin].tareas">
-                                                                <div class="row" ng-init="mostrar10_[$index] = false;">
-                                                                    <div class="col-2">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-4">
-                                                                        <span class="padding_izq_15px">Cantidad: </span>
-                                                                    </div>
-                                                                    <div class="col-7">
-                                                                        <input type="number" class="form-control" ng-model="tarea.estado">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREA 1-->
-                                                            
-                                                            <!--INICIO TAREA 2-->
-                                                            <p class="centrado texto_azul bg-gris">Cantidades de instrumental y otros elementos</p>
-                                                            <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.botiquin].tareas2">
-                                                                <div class="row" ng-init="mostrar10_[$index] = false;">
-                                                                    <div class="col-2">
-                                                                        <p class="negrita">{{$index + 1}}</p>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
-                                                                            <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <input type="number" class="form-control" ng-model="tarea.estado">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
-                                                                    <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                            <!--FIN TAREA 2-->
-                                                        </div>
+                                                        <!--FIN TAREA 3-->
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--FIN DE ACCORDION-->
-                                        </form>
-                                        <!--FIN DE FORMULARIO-->
-            
-                                        <div class="row d-flex justify-content-center margen_sup_25px">
-                                            <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="enviar_informacion();">enviar</button>    
+                                            <!--FIN PRIMERA CATEGORÍA-->
+
+                                            <!--INICIO SEGUNDA CATEGORÍA-->
+                                            <div class="card mb-1 border-0 rounded-0">
+                                                <div class="card-header py-2" id="headingTwo">
+                                                    <a href="" class="collapsed" data-toggle="collapse" data-target="#ac2" aria-expanded="false" aria-controls="ac2">
+                                                        Prueba diagnóstica
+                                                    </a>
+                                                </div>
+                                                <div id="ac2" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="row d-flex justify-content-center bg-gris">
+                                                            <p class="centrado texto_azul padding_izq_10px padding_der_10px">Características físicas del agua de estanque de piscinas y estructura similar</P>
+                                                        </div>
+
+                                                        <!--TAREAS-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.prueba_diagnostica].tareas">
+                                                            <div class="row" ng-init="mostrar4_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar4_[$index] = !mostrar4_[$index]">
+                                                                        <i class="material-icons" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);" value="{{tarea.opcion1}}">
+                                                                        <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id}}">{{tarea.opcion1}}</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="prueba_diagnostica-{{tarea.id}}" class="custom-control-input" id="prueba_diagnostica-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_diagnostica($index);"  value="{{tarea.opcion2}}">
+                                                                        <label class="custom-control-label" for="prueba_diagnostica-{{tarea.id + 1}}">{{tarea.opcion2}}</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" ng-show="mostrar4_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_diagnostica($index);" ng-blur="duplicar_tarea_diagnostica($index);"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN DE TAREAS-->
+
+                                                        <div class="row d-flex justify-content-center bg-gris">
+                                                            <p class="centrado texto_azul padding_izq_10px padding_der_10px">Características químicas del agua de estanque piscina estructura similar</P>
+                                                        </div>
+
+                                                        <!--INICIO DE TOMA DE MUESTRAS-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.prueba_diagnostica].diagnostico">
+                                                            <div class="row" ng-init="mostrar5_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar5_[$index] = !mostrar5_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <input ng-disabled="$index == 2" type="text" class="form-control" ng-model="tarea.estado"  ng-blur="duplicar_tarea_diagnostica2($index)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar5_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+
+                                                        <!--FIN DE TOMA DE MUESTRAS-->
+
+                                                        <div class="row d-flex justify-content-center margen_sup_25px">
+                                                            <button ng-disabled="" class="collapsed btn btn-warning" data-toggle="collapse" data-target="#ac2" aria-expanded="false" ng-click="calcular();">Calcular</button>    
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--FIN SEGUNDA CATEGORÍA-->
+
+                                            <!--INICIO TERCERA CATEGORÍA-->
+                                            <div class="card mb-1 border-0 rounded-0">
+                                                <div class="card-header py-2" id="headingThree">
+                                                    <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac5" aria-expanded="false" aria-controls="ac5">
+                                                        Elementos de seguridad
+                                                    </a>
+                                                </div>
+                                                <div id="ac5" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <!--INICIO DE ELEMENTOS DE SEGURIDAD-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.elementos_seguridad].tareas">
+                                                            <div class="row" ng-init="mostrar6_[$index] = false;">
+                                                                <div class="col-2 nopadding_der">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar6_[$index] = !mostrar6_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-6 margen_inf_15px">
+                                                                    <label>Cantidad</label>
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado" ng-blur="duplicar_tarea_seguridad($index)">
+                                                                </div>
+                                                                <div class="col-s6">
+                                                                    <label>Se evidencia</label>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="custom-control custom-radio">
+                                                                                <input type="radio" name="elementos_seguridad-{{tarea.id}}" class="custom-control-input" id="elementos_seguridad-{{tarea.id}}" ng-model="tarea.evidencia" value="Sí">
+                                                                                <label class="custom-control-label" for="elementos_seguridad-{{tarea.id}}">Sí</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="custom-control custom-radio">
+                                                                                <input type="radio" name="elementos_seguridad-{{tarea.id}}" class="custom-control-input" id="elementos_seguridad-{{tarea.id + 1}}" ng-model="tarea.evidencia" value="No">
+                                                                                <label class="custom-control-label" for="elementos_seguridad-{{tarea.id + 1}}">No</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar6_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_seguridad($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN DE ELEMENTOS DE SEGURIDAD-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--FIN TERCERA CATEGORÍA-->
+
+                                            <!--INICIO CUARTA CATEGORÍA-->
+                                            <div class="card mb-1 border-0 rounded-0">
+                                                <div class="card-header py-2" id="headingThree">
+                                                    <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac3" aria-expanded="false" aria-controls="ac3">
+                                                        Aseo semanal
+                                                    </a>
+                                                </div>
+                                                <div id="ac3" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="texto_azul bg-gris">CUARTO DE QUÍMICOS</p>
+
+                                                        <!--INICIO DE ASEO SEMANAL-->
+                                                        <!--INICIO TAREAS 1-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas">
+                                                            <div class="row" ng-init="mostrar7_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar7_[$index] = !mostrar7_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal1-{{tarea.id}}" class="custom-control-input" id="aseo_semanal1-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal($index)" value="realizado">
+                                                                        <label class="custom-control-label" for="aseo_semanal1-{{tarea.id}}">Realizado</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal1-{{tarea.id}}" class="custom-control-input" id="aseo_semanal1-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal($index)" value="pendiente">
+                                                                        <label class="custom-control-label" for="aseo_semanal1-{{tarea.id + 1}}">Pendiente</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar7_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_aseo_semanal($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN TAREAS 1-->
+
+                                                        <p class="texto_azul bg-gris">CUARTO DE MÁQUINAS</p>
+                                                        <!--INICIO TAREAS 2-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas2">
+                                                            <div class="row" ng-init="mostrar8_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar8_[$index] = !mostrar8_[$index]">
+                                                                        <i class="material-icons" name="aseo_semanal2-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal2-{{tarea.id}}" class="custom-control-input" id="aseo_semanal2-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal2($index);" value="realizado">
+                                                                        <label class="custom-control-label" for="aseo_semanal2-{{tarea.id}}">Realizado</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal2-{{tarea.id}}" class="custom-control-input" id="aseo_semanal2-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal2($index);" value="pendiente">
+                                                                        <label class="custom-control-label" for="aseo_semanal2-{{tarea.id + 1}}">Pendiente</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar8_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_aseo_semanal2($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN TAREAS 2-->
+
+                                                        <p class="texto_azul bg-gris">ESTANQUE</p>
+                                                        <!--INICIO TAREAS 3-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.aseo_semanal].tareas3">
+                                                            <div class="row" ng-init="mostrar9_[$index] = false;">
+                                                                <div class="col-1">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar9_[$index] = !mostrar9_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal3-{{tarea.id}}" class="custom-control-input" id="aseo_semanal3-{{tarea.id}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal($index);" value="realizado">
+                                                                        <label class="custom-control-label" for="aseo_semanal3-{{tarea.id}}">Realizado</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" name="aseo_semanal3-{{tarea.id}}" class="custom-control-input" id="aseo_semanal3-{{tarea.id + 1}}" ng-model="tarea.estado" ng-change="duplicar_tarea_aseo_semanal($index);" value="pendiente">
+                                                                        <label class="custom-control-label" for="aseo_semanal3-{{tarea.id + 1}}">Pendiente</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar9_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" ng-model="tarea.observaciones" ng-bur="duplicar_tarea_aseo_semanal($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN TAREAS 3-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--FIN CUARTA CATEGORÍA-->
+
+                                            <!--INICIO QUINTA CATEGORÍA-->
+                                            <div class="card mb-1 border-0 rounded-0">
+                                                <div class="card-header py-2" id="headingThree">
+                                                    <a href="" class=" collapsed" data-toggle="collapse" data-target="#ac4" aria-expanded="false" aria-controls="ac4">
+                                                        Botiquín
+                                                    </a>
+                                                </div>
+
+                                                <div id="ac4" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="centrado texto_azul bg-gris">Cantidades de elementos esenciales de un botiquín</p>
+                                                        <!--INICIO TAREA 1-->
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.botiquin].tareas">
+                                                            <div class="row" ng-init="mostrar10_[$index] = false;">
+                                                                <div class="col-2 nopadding_der">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <span class="padding_izq_15px">Cantidad: </span>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado" ng-blur="duplicar_tarea_botiquin($index)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones" ng-blur="duplicar_tarea_botiquin($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN TAREA 1-->
+
+                                                        <!--INICIO TAREA 2-->
+                                                        <p class="centrado texto_azul bg-gris">Cantidades de instrumental y otros elementos</p>
+                                                        <div class="nomargen noppading" ng-repeat="tarea in frm_chequeo.categorias[num_categoria.botiquin].tareas2">
+                                                            <div class="row" ng-init="mostrar10_[$index] = false;">
+                                                                <div class="col-2">
+                                                                    <p class="negrita">{{$index + 1}}</p>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="margen_inf_10px justificado texto_azul">{{tarea.nom_tarea}}</p>
+                                                                </div>
+                                                                <div class="col-2">
+                                                                    <a ng-click="mostrar10_[$index] = !mostrar10_[$index]">
+                                                                        <i class="material-icons" name="prueba_diagnostica1-{{tarea.id}}" ng-class="{texto_naranja:tarea.observaciones}">info</i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <input type="number" class="form-control" ng-model="tarea.estado"  ng-blur="duplicar_tarea_botiquin($index)">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group margen_sup_5px" ng-show="mostrar10_[$index]">
+                                                                <textarea class="form-control" rows="2" placeholder="Observaciones" name="obs_aspirado" ng-model="tarea.observaciones"  ng-blur="duplicar_tarea_botiquin($index)"></textarea>
+                                                            </div>
+                                                            <div class="dropdown-divider"></div>
+                                                        </div>
+                                                        <!--FIN TAREA 2-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--FIN DE ACCORDION-->
+                                    </form>
+                                    <!--FIN DE FORMULARIO-->
+
+                                    <div class="row d-flex justify-content-center margen_sup_25px">
+                                        <button ng-disabled="form_incidente.$invalid" class="btn btn-warning" ng-click="enviar_informacion();">enviar</button>    
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <!--FIN DE CONTENEDOR-->
+
+                        <!--INICIO DE CONTENEDOR PARA MOSTRAR RESULTADOS-->
+                        <div class="container"  ng-show="!mostrar_inicial">
+                            <div class="row">
+                                <div class="tab-pane  p-3" id="tables" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-12 centrado">
+                                            <p class="fuente_20px texto_azul">Resultado del análisis</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-sm table-striped table-bordered mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="centrado" scope="col">Parámetro</th>
+                                                <th class="centrado" scope="col">Medida</th>
+                                                <th class="centrado" scope="col">Insumo</th>
+                                                <th class="centrado" scope="col">Sugerido (g)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="parametro in parametros track by $index" class="{{(parametro.nom_parametro == parametro_sugerido)? 'fuera_rango':'negrita'}}">
+                                                <th scope="row">{{parametro.nom_parametro}}</th>
+                                                <td class="centrado">{{parametro.medida}}</td>
+                                                <td>{{(parametro.nom_parametro == parametro_sugerido)? parametro.insumo.nom_insumo :''}}</td>
+                                                <td class="centrado">{{(parametro.nom_parametro == parametro_sugerido)? (parametro.sugerido | number: 2):''}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-12 margen_sup_20px">
+                                            <form name="form_aplicacion">
+                                                <div class="row">
+                                                    <div class="col-12 centrado">
+                                                        <p class="fuente_20px texto_azul">Aplicación</p>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <p class="texto_azul">
+                                                            Se sugiere la aplicación de {{parametros[indice].sugerido| number: 2}} gramos de {{parametros[indice].insumo.nom_insumo}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 nopadding_der">
+                                                        <span class="padding_izq_15px">Cantidad aplicada : </span>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="number" class="form-control" ng-model="parametros[indice].aplicado" required>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row d-flex justify-content-center margen_sup_25px">
+                                                    <button ng-disabled="parametros[indice].aplicado == 0" class="btn btn-warning" ng-click="aplicar();">APLICAR</button>    
+                                                </div> 
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -668,78 +674,79 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
+        </div>    
 
         <!-- page main ends -->
         <!-- Modal para selección de piscina-->
-        <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="seleccionPiscinaLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="seleccionPiscinaLabel">Resultados prueba diagóstica</h5>
-                        <button type="button" class="close" ng-click="cerrar_modal();">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <table class="table table-sm table-striped table-bordered mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Medida</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">PH</th>
-                                    <!--ng-class="{texto_naranja:tarea.observaciones}"-->
-                                    <td class="centrado fuera de rango">
-                                        {{frm_chequeo.categorias[1].diagnostico[3].estado}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Alcalinidad</th>
-                                    <td class="centrado">
-                                        {{frm_chequeo.categorias[1].diagnostico[7].estado}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cloro total</th>
-                                    <td class="centrado">
-                                        {{frm_chequeo.categorias[1].diagnostico[0].estado}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cloro libre</th>
-                                    <td class="centrado">
-                                        {{frm_chequeo.categorias[1].diagnostico[1].estado}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Ácido cianúrico</th>
-                                    <td class="centrado">
-                                        {{frm_chequeo.categorias[1].diagnostico[5].estado}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Dureza</th>
-                                    <td class="centrado">
-                                        {{frm_chequeo.categorias[1].diagnostico[6].estado}}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="modal-footer">
-                        <div class="row justify-content-center">
-                            <button type="button" class="btn btn-warning centrado" ng-click="">Seleccionar</button>
+        <!--        <div class="modal fade" id="modalAplicacion" tabindex="-1" role="dialog" aria-labelledby="seleccionPiscinaLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="seleccionPiscinaLabel">Resultados prueba diagóstica</h5>
+                                <button type="button" class="close" ng-click="cerrar_modal();">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+        
+                            <div class="modal-body">
+                                <table class="table table-sm table-striped table-bordered mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Medida</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">PH</th>
+                                            ng-class="{texto_naranja:tarea.observaciones}"
+                                            <td class="centrado fuera de rango">
+                                                {{frm_chequeo.categorias[1].diagnostico[3].estado}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Alcalinidad</th>
+                                            <td class="centrado">
+                                                {{frm_chequeo.categorias[1].diagnostico[7].estado}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Cloro total</th>
+                                            <td class="centrado">
+                                                {{frm_chequeo.categorias[1].diagnostico[0].estado}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Cloro libre</th>
+                                            <td class="centrado">
+                                                {{frm_chequeo.categorias[1].diagnostico[1].estado}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Ácido cianúrico</th>
+                                            <td class="centrado">
+                                                {{frm_chequeo.categorias[1].diagnostico[5].estado}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dureza</th>
+                                            <td class="centrado">
+                                                {{frm_chequeo.categorias[1].diagnostico[6].estado}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <div class="modal-footer">
+                                <div class="row justify-content-center">
+                                    <button type="button" class="btn btn-warning centrado" ng-click="">Aplicar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>-->
         <!--Fin de modal-->
 
         <!-- Optional JavaScript -->
